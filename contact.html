@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <!-- Same head content as base template -->
+     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Innovators Club | Building Future Leaders</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;700&display=swap">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="css/[page-specific].css">
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+
+     <div class="loading-screen">
+        <div class="loading-spinner">
+            <div class="spinner-circle"></div>
+            <div class="spinner-text">Loading Innovation</div>
+        </div>
+    </div>
+    <!-- Navigation -->
+    <nav class="glass-nav">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="logo rud.png" alt="Tech Innovators Club">
+                <span>Tech Innovators</span>
+            </a>
+            <div class="nav-links">
+                <a href="home.html">Home</a>
+                <a href="events.html">Events</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="team.html">Team</a>
+                <a href="contact.html">Contact</a>
+                <a href="join.html" style="background-color: #3f51b5; color: white; padding: 10px 24px; border-radius: 20px; text-decoration: none; font-weight: bold; display: inline-block; font-family: sans-serif; font-size: 16px;">Join Us</a>
+
+                <button class="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                </button>
+            </div>
+            <button class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+    <main id="main-content">
+        <!-- Contact Hero Section -->
+        <section class="contact-hero">
+            <div class="container">
+                <span class="hero-shape hero-shape1"></span>
+    <span class="hero-shape hero-shape2"></span>
+    <span class="hero-shape hero-shape3"></span>
+                <div class="hero-content">
+                    <h1 class="hero-title animate-on-scroll">Contact Us</h1>
+                    <p class="hero-subtitle animate-on-scroll">We'd love to hear from you</p>
+                </div>
+            </div>
+            <div class="hero-pattern"></div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact-section">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-info animate-on-scroll">
+                        <h2 class="section-title">Get In Touch</h2>
+                        <p class="section-subtitle">Have questions or suggestions? Reach out to us through any of these channels.</p>
+                        
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="info-content">
+                                <h3>Our Location</h3>
+                                <p>Rayyappparaju St, Chittinagar, Fraserpeta, Vijayawada, Andhra Pradesh 520001, India</p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div class="info-content">
+                                <h3>Phone Number</h3>
+                                <p>+91 9566859053</p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="info-content">
+                                <h3>Email Address</h3>
+                                <p>contact@techinnovators.club</p>
+                            </div>
+                        </div>
+                        
+                        <div class="social-links">
+                            <h3>Follow Us</h3>
+                            <div class="social-icons">
+                                <a href="https://www.facebook.com/share/1BkYessa2S/?mibextid=qi2Omg" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                                <a href="https://www.threads.net/@__vasanth__0_7" class="social-icon"><i class="fab fa-twitter"></i></a>
+                                <a href="https://www.instagram.com/__vasanth__0_7?igsh=MWgycmc1dWNoMDV4Mw==" class="social-icon"><i class="fab fa-instagram"></i></a>
+                                <a href="https://www.linkedin.com/in/vasanth-m-031a1332b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="https://youtu.be/eXDNkwIeOqA?si=nh--IQrE07Oud-Um" class="social-icon"><i class="fab fa-youtube"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form-container animate-on-scroll" data-delay="0.2">
+                        <form id="contact-form" class="contact-form glass-card">
+                            <h2 class="form-title">Send Us a Message</h2>
+                            
+                            <div class="form-group">
+                                <label for="name">Your Name</label>
+                                <input type="text" id="name" name="name" required>
+                                <div class="error-message"></div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email" required>
+                                <div class="error-message"></div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <input type="text" id="subject" name="subject" required>
+                                <div class="error-message"></div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">Your Message</label>
+                                <textarea id="message" name="message" rows="5" required></textarea>
+                                <div class="error-message"></div>
+                            </div>
+                            
+                            
+                            <button type="submit" class="button primary-button submit-button">
+                                <span class="button-text">Send Message</span>
+                                <div class="spinner hidden"></div>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Networking CTA -->
+
+
+        <!-- Map Section -->
+        <section class="map-section animate-on-scroll">
+            <div class="container">
+                <h2 class="section-title">Find Us</h2>
+                <p class="section-subtitle">Visit our headquarters at the Innovation Hub</p>
+                
+                <div class="map-container glass-card">
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.123456789!2d80.533546!3d16.5319363!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a35ef2015a8c405%3A0xb0d9d265352e7c28!2sRudraFusion%20Private%20Limited!5e0!3m2!1sen!2sin!4vYOUR_TIMESTAMP" 
+    width="100%" 
+    height="450" 
+    style="border:0;" 
+    allowfullscreen="" 
+    loading="lazy" >
+    referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+</div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+            <div class="container">
+                <h2 class="section-title animate-on-scroll">Frequently Asked Questions</h2>
+                <p class="section-subtitle animate-on-scroll">Find answers to common questions</p>
+                
+                <div class="faq-grid">
+                    <div class="faq-item glass-card animate-on-scroll">
+                        <button class="faq-question">
+                            <span>How can I join the club?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>You can join the club by filling out the application form on our "Join Us" page. We review applications on a rolling basis and will get back to you within 1-2 weeks.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item glass-card animate-on-scroll" data-delay="0.1">
+                        <button class="faq-question">
+                            <span>Do I need prior experience to attend events?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>No prior experience is required for most of our events. We organize activities for all skill levels, from beginners to advanced participants. Each event description indicates the recommended skill level.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item glass-card animate-on-scroll" data-delay="0.2">
+                        <button class="faq-question">
+                            <span>Are there any membership fees?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Basic membership is free and gives you access to most of our events. Some specialized workshops or hackathons may have a small participation fee to cover materials and resources.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item glass-card animate-on-scroll" data-delay="0.3">
+                        <button class="faq-question">
+                            <span>How often do you organize events?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>We typically organize 2-3 events per month, including workshops, networking sessions, and hackathons. During summer and winter breaks, we may have additional special events.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item glass-card animate-on-scroll" data-delay="0.4">
+                        <button class="faq-question">
+                            <span>Can I volunteer for the club?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yes! We're always looking for passionate volunteers. You can indicate your interest in volunteering when filling out the membership application or contact our volunteer coordinator directly.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item glass-card animate-on-scroll" data-delay="0.5">
+                        <button class="faq-question">
+                            <span>Do you offer mentorship programs?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yes, we have a structured mentorship program that pairs experienced members with newcomers. The program runs quarterly, and you can apply through our website.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer as in base template -->
+      <footer class="glass-footer">
+        <div class="footer-grid">
+            <div class="footer-about">
+                <h3>Tech Innovators Club</h3>
+                <p>Building the next generation of technology leaders through innovation, education, and community.</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/share/1BkYessa2S/?mibextid=qi2Omg"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.threads.net/@__vasanth__0_7"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/__vasanth__0_7?igsh=MWgycmc1dWNoMDV4Mw=="><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/vasanth-m-031a1332b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://youtu.be/eXDNkwIeOqA?si=nh--IQrE07Oud-Um"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="team.html">Our Team</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="join.html">Join Our Club</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 53/a high school road , Coimbatore</p>
+                <p><i class="fas fa-phone-alt"></i> +91 9566859053</p>
+                <p><i class="fas fa-envelope"></i> contact@techinnovators.club</p>
+            </div>
+            <div class="footer-newsletter">
+                <h3>Stay Updated</h3>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Tech Innovators Club. All rights reserved.</p>
+            <div class="legal-links">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Contact Button -->
+    <a href="contact.html" class="floating-contact">
+        <i class="fas fa-comment-dots"></i>
+        <span>Contact Us</span>
+    </a>
+
+    </footer><script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="main.js"></script>
+    <script src="js/[page-specific].js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script src="contact.js"></script>
+</body>
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Innovators Club | Tech Talks</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;700&display=swap">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="talks.css">
+</head>
+<body>
+    <!-- Loading screen -->
+    <div class="loading-screen">
+        <div class="loading-spinner">
+            <div class="spinner-circle"></div>
+            <div class="spinner-text">Loading Innovation</div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="glass-nav">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="logo rud.png" alt="Tech Innovators Club">
+                <span>Tech Innovators Club</span>
+            </a>
+            <div class="nav-links">
+                <a href="home.html">Home</a>
+                <a href="events.html">Events</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="team.html">Team</a>
+                <a href="contact.html">Contact</a>
+                <a href="join.html" style="background-color: #3f51b5; color: white; padding: 10px 24px; border-radius: 20px; text-decoration: none; font-weight: bold; display: inline-block; font-family: sans-serif; font-size: 16px;">Join Us</a>
+               <div> <button class="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                </button>
+            </div>
+            <button class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <main id="main-content">
+        <!-- Talks Hero Section -->
+        <section class="talks-hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title animate-on-scroll">Tech Talks</h1>
+                    <p class="hero-subtitle animate-on-scroll">Learn from industry experts and thought leaders</p>
+                    <div class="hero-cta">
+                        <a href="#talks-events" class="button primary-button">View Talks</a>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-shape hero-shape1"></div>
+            <div class="hero-shape hero-shape2"></div>
+            <div class="hero-shape hero-shape3"></div>
+        </section>
+
+        <!-- Talks Filters -->
+        <section class="talks-filters" id="talks-events">
+            <div class="container">
+                <div class="filter-controls">
+                    <div class="filter-group">
+                        <label for="category-filter">Category:</label>
+                        <select id="category-filter" class="filter-select">
+                            <option value="all">All Categories</option>
+                            <option value="tech">Technology</option>
+                            <option value="career">Career</option>
+                            <option value="innovation">Innovation</option>
+                            <option value="leadership">Leadership</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="format-filter">Format:</label>
+                        <select id="format-filter" class="filter-select">
+                            <option value="all">All Formats</option>
+                            <option value="live">Live Talks</option>
+                            <option value="recorded">Recorded</option>
+                        </select>
+                    </div>
+                    <div class="search-group">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="talks-search" placeholder="Search talks...">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Talks Grid Section -->
+        <section class="talks-grid-section">
+            <div class="container">
+                <div class="talks-grid">
+                    <!-- Talks will be loaded here by JavaScript -->
+                </div>
+                <div class="talks-load-more-container">
+                    <center>
+                    <button class="button primary-button talks-load-more">Load More Talks</button>
+                    </center>
+                </div>
+            </div>
+        </section>
+
+        <!-- Talks CTA Section -->
+        <section class="talks-cta">
+            <div class="container">
+                <div class="talks-cta-content">
+                    <h2>Suggest a Speaker</h2>
+                    <p>Know an amazing speaker we should invite? We're always looking for inspiring individuals to share their knowledge with our community.</p>
+                    <a href="contact.html" class="button primary-button">Get In Touch</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+  <div class="talks-modal">
+    <div class="modal-overlay"></div>
+    <div class="modal-content">
+        <button class="modal-close">&times;</button>
+        <div class="modal-body">
+            <!-- Talk content will be inserted here dynamically -->
+        </div>
+    </div>
+</div>
+
+    <!-- Footer -->
+    <footer class="glass-footer">
+        <div class="footer-grid">
+            <div class="footer-about">
+                <h3>Tech Innovators Club</h3>
+                <p>Building the next generation of technology leaders through innovation, education, and community.</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/share/1BkYessa2S/?mibextid=qi2Omg"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.threads.net/@__vasanth__0_7"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/__vasanth__0_7?igsh=MWgycmc1dWNoMDV4Mw=="><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/vasanth-m-031a1332b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://youtu.be/eXDNkwIeOqA?si=nh--IQrE07Oud-Um"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="team.html">Our Team</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="join.html">Join Our Club</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 53/a high school road, Coimbatore</p>
+                <p><i class="fas fa-phone-alt"></i> +91 9566859053</p>
+                <p><i class="fas fa-envelope"></i> contact@techinnovators.club</p>
+            </div>
+            <div class="footer-newsletter">
+                <h3>Stay Updated</h3>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Tech Innovators Club. All rights reserved.</p>
+            <div class="legal-links">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Contact Button -->
+    <a href="contact.html" class="floating-contact">
+        <i class="fas fa-comment-dots"></i>
+        <span>Contact Us</span>
+    </a>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script src="main.js"></script>
+    <script src="talks.js"></script>
+</body>
+</html>
