@@ -1,0 +1,825 @@
+/* ===== Networking Styles ===== */
+/* Base Variables */
+:root {
+  --primary-color: #4361ee;
+  --secondary-color: #3f37c9;
+  --accent-color: #4cc9f0;
+  --light-color: #f8f9fa;
+  --dark-color: #212529;
+  --text-light: #f8f9fa;
+  --text-dark: #212529;
+  --border-radius: 8px;
+  --transition-speed: 0.3s;
+  --success-color: #4ade80;
+}
+
+[data-theme="dark"] {
+  --primary-color: #4cc9f0;
+  --secondary-color: #4361ee;
+  --accent-color: #3f37c9;
+  --light-color: #23283a;
+  --dark-color: #f8f9fa;
+  --text-light: #f8f9fa;
+  --text-dark: #e0e6f7;
+  --glass-bg: rgba(30, 34, 54, 0.7);
+  --glass-border: 1px solid rgba(76, 201, 240, 0.15);
+}
+
+/* Networking Hero Section */
+.networking-hero {
+  height: 480px;
+  background: linear-gradient(120deg, var(--secondary-color) 0%, var(--primary-color) 60%, var(--accent-color) 100%);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  animation: heroFadeIn 1.2s cubic-bezier(0.77,0,0.175,1) both;
+}
+
+/* Animated floating shapes */
+.networking-hero .hero-shape {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.18;
+  animation: floatShape 7s ease-in-out infinite alternate;
+  pointer-events: none;
+}
+.networking-hero .hero-shape1 {
+  width: 180px; height: 180px; left: 8%; top: 18%;
+  background: linear-gradient(135deg, #fff 0%, var(--secondary-color) 100%);
+  animation-delay: 0s;
+}
+.networking-hero .hero-shape2 {
+  width: 120px; height: 120px; right: 10%; top: 10%;
+  background: linear-gradient(135deg, #fff 0%, var(--primary-color) 100%);
+  animation-delay: 2s;
+}
+.networking-hero .hero-shape3 {
+  width: 90px; height: 90px; left: 20%; bottom: 12%;
+  background: linear-gradient(135deg, #fff 0%, var(--accent-color) 100%);
+  animation-delay: 1s;
+}
+
+.networking-hero .container {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: heroContentFade 1.2s 0.4s cubic-bezier(0.77,0,0.175,1) both;
+}
+
+.networking-hero .hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.networking-hero .hero-title {
+  font-size: 4rem;
+  font-weight: 800;
+  letter-spacing: -2px;
+  margin-bottom: 18px;
+  background: linear-gradient(90deg, #fff 60%, var(--accent-color) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  animation: heroTitlePop 1.2s 0.7s cubic-bezier(0.77,0,0.175,1) both;
+}
+
+.networking-hero .hero-subtitle {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #e0e6f7;
+  margin-bottom: 36px;
+  letter-spacing: 0.5px;
+  animation: heroSubtitleFade 1.2s 1s cubic-bezier(0.77,0,0.175,1) both;
+}
+
+.networking-hero .hero-cta {
+  margin-top: 18px;
+  animation: heroCtaFade 1.2s 1.3s cubic-bezier(0.77,0,0.175,1) both;
+}
+
+.networking-hero .hero-cta .button {
+  padding: 16px 38px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-radius: 30px;
+  background: linear-gradient(90deg, var(--secondary-color) 0%, var(--primary-color) 100%);
+  color: #fff;
+  border: none;
+  box-shadow: 0 8px 32px rgba(67, 97, 238, 0.18);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.networking-hero .hero-cta .button:hover {
+  transform: translateY(-4px) scale(1.04);
+  box-shadow: 0 16px 48px rgba(67, 97, 238, 0.25);
+  background: linear-gradient(90deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+}
+
+/* Networking Filters */
+.networking-filters {
+  padding: 30px 0;
+  background: var(--light-color);
+  position: sticky;
+  top: 80px;
+  z-index: 100;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.networking-filters.scrolled {
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.filter-controls {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.filter-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.filter-group label {
+  font-weight: 500;
+  color: var(--text-dark);
+  white-space: nowrap;
+}
+
+.filter-select {
+  padding: 10px 15px;
+  border-radius: var(--border-radius);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  transition: all var(--transition-speed) ease;
+  min-width: 180px;
+}
+
+.filter-select:hover {
+  border-color: var(--primary-color);
+}
+
+.filter-select:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(67, 97, 238, 0.2);
+}
+
+.search-group {
+  position: relative;
+  min-width: 250px;
+}
+
+.search-group input {
+  width: 100%;
+  padding: 10px 15px 10px 40px;
+  border-radius: var(--border-radius);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  font-family: 'Poppins', sans-serif;
+}
+
+.search-group i {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--primary-color);
+}
+
+/* Networking Grid Section */
+.networking-grid-section {
+  padding: 60px 0;
+  background: var(--light-color);
+}
+
+.networking-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 30px;
+}
+
+.networking-card {
+  background: white;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: all var(--transition-speed) ease;
+  position: relative;
+  transform: translateY(0);
+  animation: cardFadeIn 0.6s ease both;
+}
+
+@keyframes cardFadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.networking-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.networking-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: var(--primary-color);
+  color: white;
+  padding: 5px 15px;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  z-index: 2;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(67, 97, 238, 0.7); }
+  70% { box-shadow: 0 0 0 10px rgba(67, 97, 238, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(67, 97, 238, 0); }
+}
+
+.networking-image {
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+}
+
+.networking-image::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(67, 97, 238, 0.1), rgba(63, 55, 201, 0.3));
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.networking-card:hover .networking-image::before {
+  opacity: 1;
+}
+
+.networking-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.networking-card:hover .networking-image img {
+  transform: scale(1.1);
+}
+
+.networking-content {
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.networking-content::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(to right, var(--secondary-color), var(--primary-color));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.networking-card:hover .networking-content::after {
+  transform: scaleX(1);
+}
+
+.networking-date {
+  display: flex;
+  align-items: center;
+  color: var(--primary-color);
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+.networking-date i {
+  margin-right: 5px;
+}
+
+.networking-title {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: var(--text-dark);
+  transition: color 0.3s ease;
+}
+
+.networking-card:hover .networking-title {
+  color: var(--primary-color);
+}
+
+.networking-host {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+}
+
+.networking-host img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.networking-excerpt {
+  color: #666;
+  margin-bottom: 15px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.networking-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.networking-meta-item {
+  display: flex;
+  align-items: center;
+  font-size: 0.8rem;
+  background: rgba(67, 97, 238, 0.1);
+  padding: 5px 10px;
+  border-radius: 50px;
+  color: var(--primary-color);
+  transition: all 0.3s ease;
+}
+
+.networking-card:hover .networking-meta-item {
+  background: rgba(63, 55, 201, 0.1);
+  color: var(--secondary-color);
+}
+
+.networking-meta-item i {
+  margin-right: 5px;
+  font-size: 0.7rem;
+}
+
+.networking-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.networking-price {
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.networking-price.free {
+  color: var(--success-color);
+}
+
+/* Networking CTA */
+.networking-cta {
+  padding: 80px 0;
+  background: linear-gradient(to right, var(--secondary-color), var(--primary-color));
+  position: relative;
+  overflow: hidden;
+}
+
+.networking-cta::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('../assets/images/pattern2.png') center/cover;
+  opacity: 0.1;
+  animation: patternMove 60s linear infinite;
+}
+
+@keyframes patternMove {
+  0% { background-position: 0 0; }
+  100% { background-position: 1000px 1000px; }
+}
+
+.networking-cta-content {
+  padding: 60px;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--border-radius);
+  transform: perspective(1000px) rotateX(0deg);
+  transition: transform 0.5s ease;
+}
+
+.networking-cta-content:hover {
+  transform: perspective(1000px) rotateX(5deg);
+}
+
+.networking-cta-content h2 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  color: white;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.networking-cta-content p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Networking Modal */
+.networking-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transition: all var(--transition-speed) ease;
+}
+
+.networking-modal.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.networking-modal-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+.networking-modal-content {
+  position: relative;
+  width: 90%;
+  max-width: 900px;
+  max-height: 90vh;
+  overflow-y: auto;
+  background: white;
+  border-radius: var(--border-radius);
+  padding: 40px;
+  z-index: 2;
+  transform: translateY(20px);
+  transition: transform var(--transition-speed) ease;
+}
+
+.networking-modal.active .networking-modal-content {
+  transform: translateY(0);
+}
+
+.networking-modal-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.1);
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: all var(--transition-speed) ease;
+}
+
+.networking-modal-close:hover {
+  background: var(--primary-color);
+  color: white;
+}
+
+.networking-modal-body {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+
+.networking-modal-image {
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+
+.networking-modal-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.networking-modal-details h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: var(--primary-color);
+}
+
+.networking-modal-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.networking-modal-meta-item {
+  display: flex;
+  align-items: center;
+  font-size: 0.95rem;
+}
+
+.networking-modal-meta-item i {
+  margin-right: 8px;
+  color: var(--primary-color);
+}
+
+.networking-modal-description {
+  margin-bottom: 30px;
+  line-height: 1.7;
+}
+
+.networking-modal-schedule h3,
+.networking-modal-host h3 {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  color: var(--primary-color);
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.networking-schedule-item {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.networking-schedule-item:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.networking-schedule-time {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.networking-schedule-activity {
+  color: #666;
+}
+
+.networking-host-profile {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.networking-host-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 20px;
+  border: 3px solid rgba(67, 97, 238, 0.2);
+}
+
+.networking-host-info h4 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.networking-host-title {
+  color: var(--primary-color);
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+}
+
+.networking-host-social {
+  display: flex;
+  gap: 15px;
+}
+
+.networking-host-social a {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: rgba(67, 97, 238, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-color);
+  transition: all var(--transition-speed) ease;
+}
+
+.networking-host-social a:hover {
+  background: var(--primary-color);
+  color: white;
+}
+
+.networking-modal-actions {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+/* Dark Mode Styles */
+[data-theme="dark"] .networking-hero {
+  background: linear-gradient(120deg, #23283a 60%, #181c27 100%);
+}
+
+[data-theme="dark"] .networking-hero .hero-title {
+  background: linear-gradient(90deg, #fff 60%, var(--accent-color) 100%);
+}
+
+[data-theme="dark"] .networking-card {
+  background: rgba(36, 41, 61, 0.98);
+  border: 1px solid rgba(76, 201, 240, 0.1);
+  box-shadow: 0 8px 32px rgba(76, 201, 240, 0.07);
+}
+
+[data-theme="dark"] .networking-title {
+  color: var(--primary-color);
+}
+
+[data-theme="dark"] .networking-excerpt {
+  color: #bfc8e2;
+}
+
+[data-theme="dark"] .networking-meta-item {
+  background: rgba(76, 201, 240, 0.2);
+}
+
+[data-theme="dark"] .networking-filters {
+  background: var(--light-color);
+  border-bottom: 1px solid rgba(76, 201, 240, 0.1);
+}
+
+[data-theme="dark"] .networking-modal-content {
+  background: var(--glass-bg);
+  color: var(--text-light);
+  border: var(--glass-border);
+}
+
+[data-theme="dark"] .networking-modal-details h2,
+[data-theme="dark"] .networking-modal-schedule h3,
+[data-theme="dark"] .networking-modal-host h3 {
+  color: var(--accent-color);
+}
+
+[data-theme="dark"] .networking-schedule-activity {
+  color: #bfc8e2;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 900px) {
+  .networking-hero { height: 340px; }
+  .networking-hero .hero-title { font-size: 2.5rem; }
+  .networking-hero .hero-subtitle { font-size: 1.1rem; }
+}
+
+@media (max-width: 768px) {
+  .networking-hero .hero-title {
+    font-size: 2.8rem;
+  }
+  
+  .filter-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .filter-group {
+    width: 100%;
+  }
+  
+  .networking-modal-content {
+    padding: 30px 20px;
+  }
+  
+  .networking-cta-content {
+    padding: 40px 20px;
+  }
+  
+  .networking-cta-content h2 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .networking-hero .hero-title {
+    font-size: 2.2rem;
+  }
+  
+  .networking-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .networking-modal-body {
+    grid-template-columns: 1fr;
+  }
+  
+  .networking-host-profile {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .networking-host-image {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+  
+  .networking-host-social {
+    justify-content: center;
+  }
+  
+  .networking-modal-actions {
+    flex-direction: column;
+  }
+  
+  .networking-modal-actions .button {
+    width: 100%;
+  }
+}
+
+/* Animations */
+@keyframes heroFadeIn {
+  0% { opacity: 0; transform: translateY(40px) scale(0.98); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes floatShape {
+  0% { transform: translateY(0) scale(1); }
+  100% { transform: translateY(-30px) scale(1.08); }
+}
+
+@keyframes heroContentFade {
+  0% { opacity: 0; transform: translateY(40px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes heroTitlePop {
+  0% { opacity: 0; transform: scale(0.95); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes heroSubtitleFade {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes heroCtaFade {
+  0% { opacity: 0; transform: scale(0.95); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes cardFadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(67, 97, 238, 0.7); }
+  70% { box-shadow: 0 0 0 10px rgba(67, 97, 238, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(67, 97, 238, 0); }
+}
+
+@keyframes patternMove {
+  0% { background-position: 0 0; }
+  100% { background-position: 1000px 1000px; }
+}

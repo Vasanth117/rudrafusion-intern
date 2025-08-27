@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Innovators Club | Gallery</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;700&display=swap">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="gallery.css">
+    <link rel="icon" href="logo rud.png" type="image/png">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen">
+        <div class="loading-spinner">
+            <div class="spinner-circle"></div>
+            <div class="spinner-text">Loading Innovation</div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="glass-nav">
+        <div class="nav-container">
+            <a href="home.html" class="logo">
+                <img src="logo rud.png" alt="Tech Innovators Club">
+                <span>Tech Innovators Club</span>
+            </a>
+            <div class="nav-links">
+                <a href="home.html">Home</a>
+                <a href="events.html">Events</a>
+                <a href="gallery.html" class="active">Gallery</a>
+                <a href="team.html">Team</a>
+                <a href="contact.html">Contact</a>
+                
+                <a href="admin-login.html">Admin Login</a>
+                 <a href="join.html" style="background-color: #3f51b5; color: white; padding: 10px 24px; border-radius: 20px; text-decoration: none; font-weight: bold; display: inline-block; font-family: sans-serif; font-size: 16px;">Join Us</a>
+                <button class="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                </button>
+            </div>
+            <button class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <main id="main-content">
+        <!-- Gallery Hero Section -->
+        <section class="gallery-hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title animate-on-scroll">Our Gallery</h1>
+                    <p class="hero-subtitle animate-on-scroll">Memories from our events and activities</p>
+                </div>
+            </div>
+            <!-- Floating shapes -->
+            <div class="hero-shape hero-shape1"></div>
+            <div class="hero-shape hero-shape2"></div>
+            <div class="hero-shape hero-shape3"></div>
+        </section>
+
+        <!-- Gallery Filters -->
+        <section class="gallery-filters">
+            <div class="container">
+                <div class="filter-controls">
+                    <div class="filter-group">
+                        <label for="category-filter">Category:</label>
+                        <select id="category-filter" class="filter-select">
+                            <option value="all">All Categories</option>
+                            <option value="hackathon">Hackathons</option>
+                            <option value="workshop">Workshops</option>
+                            <option value="meetup">Meetups</option>
+                            <option value="conference">Conferences</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="year-filter">Filter by Year:</label>
+                        <select id="year-filter" class="filter-select">
+                            <option value="all">All Years</option>
+                            <option value="2023">2023</option>
+                            <option value="2022">2022</option>
+                            <option value="2021">2021</option>
+                        </select>
+                    </div>
+                    <div class="filter-group search-group">
+                        <input type="text" id="gallery-search" placeholder="Search gallery...">
+                        <i class="fas fa-search"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Grid -->
+        <section class="gallery-grid-section">
+            <div class="container">
+                <div class="gallery-grid">
+                    <!-- Gallery items will be inserted here by JavaScript -->
+                </div>
+                <div class="load-more-container">
+                    <button class="load-more">Load More</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Event Modal -->
+        <div class="event-modal">
+            <div class="modal-overlay"></div>
+            <div class="modal-content">
+                <button class="modal-close">&times;</button>
+                <div class="modal-body">
+                    <!-- Content will be inserted here by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="glass-footer">
+        <div class="footer-grid">
+            <div class="footer-about">
+                <h3>Tech Innovators Club</h3>
+                <p>Building the next generation of technology leaders through innovation, education, and community.</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/share/1BkYessa2S/?mibextid=qi2Omg"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.threads.net/@__vasanth__0_7"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/__vasanth__0_7?igsh=MWgycmc1dWNoMDV4Mw=="><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/vasanth-m-031a1332b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://youtu.be/eXDNkwIeOqA?si=nh--IQrE07Oud-Um"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="team.html">Our Team</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <a href="join.html" style="background-color: #3f51b5; color: white; padding: 10px 24px; border-radius: 20px; text-decoration: none; font-weight: bold; display: inline-block; font-family: sans-serif; font-size: 16px;">Join Us</a>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 53/a high school road , Coimbatore</p>
+                <p><i class="fas fa-phone-alt"></i> +91 9566859053</p>
+                <p><i class="fas fa-envelope"></i> contact@techinnovators.club</p>
+            </div>
+            <div class="footer-newsletter">
+                <h3>Stay Updated</h3>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Tech Innovators Club. All rights reserved.</p>
+            <div class="legal-links">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Contact Button -->
+    <a href="contact.html" class="floating-contact">
+        <i class="fas fa-comment-dots"></i>
+        <span>Contact Us</span>
+    </a>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="main.js"></script>
+    <script src="gallery.js"></script>
+</body>
+</html>
